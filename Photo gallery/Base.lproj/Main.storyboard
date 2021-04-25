@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kkF-dC-ohi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4pl-UC-OD6">
+            <objects>
+                <navigationController id="kkF-dC-ohi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XMp-hK-geL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FcM-fJ-CrB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="UyP-KZ-VbB" kind="relationship" relationship="rootViewController" id="uBO-9W-Kin"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLA-j7-yj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-517" y="7"/>
+        </scene>
+        <!--Photo gallery-->
+        <scene sceneID="b1D-oc-Umr">
+            <objects>
+                <tabBarController id="UyP-KZ-VbB" customClass="StartViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Photo gallery" id="QDW-MM-qb0"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PBQ-um-vEp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PzT-Wq-b3y" kind="relationship" relationship="viewControllers" id="xe0-xg-HLO"/>
+                        <segue destination="qbE-z1-Zni" kind="relationship" relationship="viewControllers" id="l4b-GO-Yyx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ylG-uB-g63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="7"/>
+        </scene>
+        <!--Animals-->
+        <scene sceneID="FsV-mY-eIk">
+            <objects>
+                <tableViewController id="qbE-z1-Zni" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sV2-FC-ocr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalsCell" id="pBT-2w-F0V">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pBT-2w-F0V" id="6Rd-3o-Nnk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="N2q-Dw-tin" kind="show" id="zLY-cf-0Kp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qbE-z1-Zni" id="9Vh-nP-iiZ"/>
+                            <outlet property="delegate" destination="qbE-z1-Zni" id="Op7-hH-DMU"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Animals" image="leaf" catalog="system" id="hxY-FI-owV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqA-Fq-gm6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="374"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nY8-EG-U8X">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="N2q-Dw-tin" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IbO-dZ-6fx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-Cg-zU2">
+                                <rect key="frame" x="20" y="160" width="374" height="331"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-TU-o9l">
+                                <rect key="frame" x="20" y="511" width="374" height="331"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3NJ-2A-tUH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pmw-TU-o9l" firstAttribute="leading" secondItem="3NJ-2A-tUH" secondAttribute="leading" constant="20" id="2Ch-A1-ksg"/>
+                            <constraint firstItem="3NJ-2A-tUH" firstAttribute="bottom" secondItem="pmw-TU-o9l" secondAttribute="bottom" constant="20" id="9aD-MP-gp8"/>
+                            <constraint firstItem="Rzd-Cg-zU2" firstAttribute="leading" secondItem="3NJ-2A-tUH" secondAttribute="leading" constant="20" id="I3b-0B-MBO"/>
+                            <constraint firstItem="3NJ-2A-tUH" firstAttribute="trailing" secondItem="pmw-TU-o9l" secondAttribute="trailing" constant="20" id="StX-XU-vaJ"/>
+                            <constraint firstItem="3NJ-2A-tUH" firstAttribute="trailing" secondItem="Rzd-Cg-zU2" secondAttribute="trailing" constant="20" id="jxg-fn-FjW"/>
+                            <constraint firstItem="pmw-TU-o9l" firstAttribute="height" secondItem="Rzd-Cg-zU2" secondAttribute="height" id="l71-Td-LtX"/>
+                            <constraint firstItem="Rzd-Cg-zU2" firstAttribute="top" secondItem="3NJ-2A-tUH" secondAttribute="top" constant="20" id="mZt-Ca-gG5"/>
+                            <constraint firstItem="pmw-TU-o9l" firstAttribute="top" secondItem="Rzd-Cg-zU2" secondAttribute="bottom" constant="20" id="uKw-Zc-oAe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ld1-QK-wqv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYg-pJ-DzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2009" y="374"/>
+        </scene>
+        <!--Cars-->
+        <scene sceneID="0JF-WR-TGW">
+            <objects>
+                <tableViewController id="PzT-Wq-b3y" customClass="CarsListViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dd0-L4-ILS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carsCell" id="FOy-a7-aWo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOy-a7-aWo" id="kj3-eJ-ckY">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ESI-SQ-2Gn" kind="show" id="I3h-8a-HDO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PzT-Wq-b3y" id="HDa-f3-vBC"/>
+                            <outlet property="delegate" destination="PzT-Wq-b3y" id="Lpk-go-hLO"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Cars" image="car" catalog="system" id="wYG-43-SWL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGw-9S-3jD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="-501"/>
+        </scene>
+        <!--Details Cars View Controller-->
+        <scene sceneID="Cd0-d6-a9E">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ESI-SQ-2Gn" customClass="DetailsCarsViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bd0-GB-gJK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9R-9M-LTb">
+                                <rect key="frame" x="20" y="160" width="374" height="331"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-uE-6qe">
+                                <rect key="frame" x="20" y="511" width="374" height="331"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WIe-oa-tZp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WIe-oa-tZp" firstAttribute="bottom" secondItem="nqD-uE-6qe" secondAttribute="bottom" constant="20" id="7ZI-i7-OOi"/>
+                            <constraint firstItem="nqD-uE-6qe" firstAttribute="height" secondItem="a9R-9M-LTb" secondAttribute="height" id="H20-dA-ZPd"/>
+                            <constraint firstItem="nqD-uE-6qe" firstAttribute="leading" secondItem="WIe-oa-tZp" secondAttribute="leading" constant="20" id="ICl-1o-lLf"/>
+                            <constraint firstItem="WIe-oa-tZp" firstAttribute="trailing" secondItem="nqD-uE-6qe" secondAttribute="trailing" constant="20" id="JAu-W1-eUe"/>
+                            <constraint firstItem="a9R-9M-LTb" firstAttribute="leading" secondItem="WIe-oa-tZp" secondAttribute="leading" constant="20" id="Kdx-8c-k2O"/>
+                            <constraint firstItem="WIe-oa-tZp" firstAttribute="trailing" secondItem="a9R-9M-LTb" secondAttribute="trailing" constant="20" id="W9P-Zc-E6J"/>
+                            <constraint firstItem="a9R-9M-LTb" firstAttribute="top" secondItem="WIe-oa-tZp" secondAttribute="top" constant="20" id="sPF-Zj-HVx"/>
+                            <constraint firstItem="nqD-uE-6qe" firstAttribute="top" secondItem="a9R-9M-LTb" secondAttribute="bottom" constant="20" id="zWH-TA-Bxu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LtK-wI-l3o"/>
+                    <connections>
+                        <outlet property="imageOne" destination="a9R-9M-LTb" id="zaK-3t-6TM"/>
+                        <outlet property="imageTwo" destination="nqD-uE-6qe" id="u01-vt-ktl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y82-Vp-Qro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.6956521739132" y="-502.23214285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="leaf" catalog="system" width="128" height="109"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
