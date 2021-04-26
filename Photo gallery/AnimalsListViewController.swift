@@ -22,7 +22,7 @@ class AnimalsListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "carsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "animalsCell", for: indexPath)
         let animal = animalsList[indexPath.row]
         var content = cell.defaultContentConfiguration()
         

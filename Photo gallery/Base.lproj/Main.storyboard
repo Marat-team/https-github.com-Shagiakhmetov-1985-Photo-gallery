@@ -107,6 +107,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ld1-QK-wqv"/>
+                    <connections>
+                        <outlet property="imageOne" destination="Rzd-Cg-zU2" id="Gw4-dl-Q4K"/>
+                        <outlet property="imageTwo" destination="pmw-TU-o9l" id="1S6-jk-1ug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYg-pJ-DzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

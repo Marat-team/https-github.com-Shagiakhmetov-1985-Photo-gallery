@@ -10,15 +10,18 @@ import UIKit
 class StartViewController: UITabBarController {
 
     let database = Cars.getDatabase()
+    let animalDatabase = Animal.getDatabase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDatabase(cars: database)
+        setupDatabase(cars: database, animals: animalDatabase)
+        
     }
     
-    private func setupDatabase(cars: [Cars]) {
+    private func setupDatabase(cars: [Cars], animals: [Animal]) {
         let carsListVC = viewControllers?.first as! CarsListViewController
         carsListVC.carsList = cars
+        let animalListVC = viewControllers?.last as! AnimalsListViewController
+        animalListVC.animalsList = animals
     }
-
 }

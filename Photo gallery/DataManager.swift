@@ -33,19 +33,19 @@ struct AnimalDatabase {
     static let animalShared = AnimalDatabase()
     
     let name = [
-        "Audi A3", "Audi A4", "Audi A6", "Audi Q3", "Audi Q5", "Audi Q7"
+        "Wolf", "SpottedDeer", "SnowLeopard", "Sable", "Fox", "Bear"
     ]
     
     let image = [
-        "AudiA3", "AudiA4", "AudiA6", "AudiQ3", "AudiQ5", "AudiQ7",
+        "Wolf", "SpottedDeer", "SnowLeopard", "Sable", "Fox", "Bear"
     ]
     
     let picturesOne = [
-        "AudiA3", "AudiA4", "AudiA6", "AudiQ3", "AudiQ5", "AudiQ7",
+        "Wolf", "SpottedDeer", "SnowLeopard", "Sable", "Fox", "Bear"
     ]
     
     let picturesTwo = [
-        "AudiA3(2)", "AudiA4(2)", "AudiA6(2)", "AudiQ3(2)", "AudiQ5(2)", "AudiQ7(2)"
+        "Wolf(2)", "SpottedDeer(2)", "SnowLeopard(2)", "Sable(2)", "Fox(2)", "Bear(2)"
     ]
     
     private init() {}
