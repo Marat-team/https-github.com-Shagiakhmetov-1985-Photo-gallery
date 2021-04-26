@@ -49,7 +49,7 @@
         <!--Animals-->
         <scene sceneID="FsV-mY-eIk">
             <objects>
-                <tableViewController id="qbE-z1-Zni" sceneMemberID="viewController">
+                <tableViewController id="qbE-z1-Zni" customClass="AnimalsListViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sV2-FC-ocr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1216" y="374"/>
         </scene>
-        <!--View Controller-->
+        <!--Details Animals View Controller-->
         <scene sceneID="nY8-EG-U8X">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="N2q-Dw-tin" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="N2q-Dw-tin" customClass="DetailsAnimalsViewController" customModule="Photo_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IbO-dZ-6fx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -21,9 +21,8 @@ class DetailsCarsViewController: UIViewController {
     }
     
     private func setupImage() {
-        for index in Database.shared.pictures {
-            imageOne.image = UIImage(named: index)
-        }
+        imageOne.image = UIImage(named: cars.picturesOne)
+        imageTwo.image = UIImage(named: cars.picturesTwo)
     }
 
 }
