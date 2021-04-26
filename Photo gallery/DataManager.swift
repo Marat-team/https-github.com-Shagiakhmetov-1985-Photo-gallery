@@ -33,7 +33,7 @@ struct AnimalDatabase {
     static let animalShared = AnimalDatabase()
     
     let name = [
-        "Wolf", "SpottedDeer", "SnowLeopard", "Sable", "Fox", "Bear"
+        "Wolf", "Spotted deer", "Snow leopard", "Sable", "Fox", "Bear"
     ]
     
     let image = [
